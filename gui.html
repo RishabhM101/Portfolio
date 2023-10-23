@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		 
+		<meta charset="utf-8">
+		<title>Telemetry</title>
+		<style>
+			
+
+			body {
+            margin: 0;
+           
+            background-image: url('./background.webp');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+        }
+	
+		</style>
+		<script type="module" crossorigin src="./assets/index-ec2e2b03.js"></script>
+		<link rel="stylesheet" href="./assets/index-eb8e9ab5.css">
+	</head>
+	<body>
+
+		 <!------------------------------------Menu--------------------->
+		 <div id="menu-overlay" onclick="toggleMenuOff()"></div>
+
+		 <div class="menu-toggle" onclick="toggleMenu()">
+			 <div class="bar"></div>
+			 <div class="bar"></div>
+			 <div class="bar"></div>
+		 </div>
+		 <div id="menu-container" class="hidden">
+			 <a href="index.html#work-box" class="menu-item">Home</a>
+			 <a href="certificates.html" class="menu-item">Certificates</a>
+			 <a href="contact.html" class="menu-item">Contact Me</a>
+		
+		 </div>
+		 <!-------------------------------------------------------------->
+
+
+		<div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+			
+			<h1 class="date">December 2022</h1>
+			<h1 class="animated_subheading sub2">Satellite Telemetry Display</h1>
+			<p class="posts posts2" style=" margin-bottom: 30px;">Numbers can tell a story, but a visual representation brings the data to life</p>
+			
+		
+			<div class="container" style=" margin-top: 0px; width: 80%; padding-bottom: 60px;">
+				<p class="posts" style="font-size: 20px; margin-top: 20px;margin-bottom: 0px;">[Touch and scroll to rotate]</p>
+				<!--3d model-->
+				<div style=" width:100%;  display: flex; flex-direction: row; 
+					justify-content: center;align-items: center; background-color: rgba(0, 0, 255, 0);">
+					
+				
+					<div class="second-inner-container" style="flex-direction: column; 
+						width: 30%;overflow-x: visible; height:100%;
+						background-color: rgba(240, 255, 255, 0); margin-left: 20px; margin-right: 15px;">
+						
+						
+
+						<p class="posts posts2" style="margin-bottom: 0px; padding-bottom: 0px;">Quaternions: </p>
+						<div id="orientation"> </div>
+						<div id="y"></div>
+						<div id="p"></div>
+						<div id="r"></div>
+
+						
+					</div> 
+					<div class="second-inner-container" style="width:70%;height: 100%; 
+						margin-right: 20px; margin-left: 15px; background-color: rgba(0, 0, 0, 0);">
+						<canvas id="bg" style="background-color: rgba(0, 255, 255, 0); 
+						width: 100%;"></canvas> 
+
+					</div> 
+			   
+		        </div>
+		
+				<p class="posts">During my internship at Space Technology and Aeronautical Rocketry, I used 3D visualization to display the orientation of our satellite in real-time, providing valuable insights for the ground station.</p>
+				
+				<p class="posts"> To achieve this, I utilized the MPU6050 sensor and RF 433MHz modules for data transmission and reception. By implementing a complementary filter on the MPU6050's gyroscope and accelerometer data I was able to calculate roll, pitch, and yaw. However, I faced some challenges, such as gimbal lock and yaw drift, using this process.
+				</p>
+
+				<p class="posts posts2">Quaternions to the rescue:</p>
+
+				<div class="second-inner-container">
+					<video controls>
+						<source src="./gui.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			
+				
+				<p class="posts">Working with quaternions can be a unique experience that presents both challenges and rewards. Though the concept of quaternions may initially be confusing, their practical application can be easy to work with. Their ability to represent rotations in 3D space without the limitations of gimbal lock makes it a powerful tool to work with.</p>
+			
+				
+	    	</div>
+
+			
+			
+
+
+	<!----------------------Footer--------------------->
+			<footer>
+					<div class="footer" style="margin-top: 20px;">
+						<div style='height: 100%; width: 60%; background-color: rgba(0, 255, 255, 0); display: flex; flex-direction: row; align-items: center; margin-left: 30px;'>
+							<a href="index.html#work-box" class="myfooter">Home</a>
+							<h1 class="footerspace">|</h1>
+							<a href="contact.html" class="myfooter">Contact</a>
+							<h1 class="footerspace">|</h1>
+							<!--<a href="certificates.html" class="myfooter">Certificates</a>-->
+						</div>
+						<div style='height: 100%; width: 40%; background-color: rgba(21, 255, 0, 0);display: flex; flex-direction: row; align-items: center; margin-right: 10px; justify-content: flex-end;'>
+							<h1 class ="myfooter_">© 2023 Rishabh Maurya</h1>
+						</div>
+					</div>
+			</footer>
+
+		</div>
+
+
+	  
+
+
+
+		
+		<script src="./script.js"></script>  
+	</body>
+</html>
